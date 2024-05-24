@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import MyRCTImageView from './ImageView';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -80,6 +81,14 @@ function App(): React.JSX.Element {
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
+          <MyRCTImageView
+            src={[
+              { uri: 'https://sponsors.vuejs.org/images/vuejobs.png', },
+            ]}
+            style={{ width: 300, height: 62, }}
+            resizeMode="cover"
+            borderRadius={100}
+          />
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
